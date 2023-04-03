@@ -1,6 +1,5 @@
 package com.sopromadze.blogapi;
 
-import com.sopromadze.blogapi.security.JwtAuthenticationFilter;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,12 +23,6 @@ public class BlogApiApplication {
 	void init() {
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 	}
-
-	@Bean
-	public JwtAuthenticationFilter jwtAuthenticationFilter() {
-		return new JwtAuthenticationFilter();
-	}
-
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
